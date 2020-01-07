@@ -1,0 +1,11 @@
+<div class="control-section">
+	<!-- Render Button to open the Dialog -->
+	<button ejs-button id='dlgbtn' #ButtonInstance (click)="BtnClick()">Open</button>
+	<ejs-dialog #Dialog [buttons]='dlgButtons' [header]='header' [animationSettings]='animationSettings'
+		[showCloseIcon]='showCloseIcon' [target]='target' [width]='width' (open)="dialogOpen()" (close)="dialogClose()">
+		<ng-template #content>
+			<!-- Declaring cusotm component -->
+			<custom name="{{ name }}"></custom>
+		</ng-template>
+	</ejs-dialog>
+</div>
